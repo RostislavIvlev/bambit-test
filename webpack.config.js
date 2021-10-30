@@ -100,7 +100,7 @@ module.exports = {
             },
 
             {
-                test: /\.js$/,
+                test: /\.js|jsx$/,
                 exclude: /node_modules/,
                 use: ['babel-loader']
             },
@@ -108,8 +108,12 @@ module.exports = {
             {
                 test: /\.pug$/,
                 use: [
+                  { loader: "html-loader" },
                   {
-                    loader: "pug-loader",
+                    loader: "pug-html-loader",
+                    options: {
+                        pretty: true
+                    }
                   },
                 ],
               },

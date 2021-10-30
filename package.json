@@ -1,7 +1,6 @@
 {
-  "name": "webpack_5_base",
+  "name": "bambit-test",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
@@ -24,11 +23,21 @@
     "node-sass": "^6.0.1",
     "optimize-css-assets-webpack-plugin": "^6.0.1",
     "pug": "^3.0.2",
+    "pug-html-loader": "^1.1.5",
     "pug-loader": "^2.4.0",
     "sass-loader": "^12.3.0",
     "terser-webpack-plugin": "^5.2.4",
     "webpack": "^5.60.0",
     "webpack-cli": "^4.9.1",
     "webpack-dev-server": "^4.3.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RostislavIvlev/bambit-test.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RostislavIvlev/bambit-test/issues"
+  },
+  "homepage": "https://github.com/RostislavIvlev/bambit-test#readme",
+  "description": ""
 }

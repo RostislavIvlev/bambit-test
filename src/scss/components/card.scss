@@ -1,0 +1,172 @@
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin: 20px auto;
+
+    .card {
+        width: 260px;
+        height: 380px;
+        background-color: $green02;
+        border-radius: 15px;
+        padding-bottom: 30px;
+
+        &_blue {
+            background-color: $blue03;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 110px;
+            width: 100%;
+            background-color: $green01;
+            border-radius: 15px 15px 0 0;
+            padding: 22px 15px;
+
+            &_blue {
+                background-color: $blue01;
+            }
+
+            &__title {
+                color: $colorBlack;
+                font-weight: 700;
+                font-size: 20px;
+                letter-spacing: 0.04em;
+            }
+
+            &__promote {
+                color: $colorGray;
+                font-size: 11px;
+                text-align: center;
+                margin-top: 8px;
+            }
+        }
+
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 23px 0 5px 0;
+            height: 265px;
+            width: 190px;
+            margin: 0 auto;
+            
+            &_green-line {
+                border-bottom: 2px solid $green01;
+            }
+
+            &_blue-line {
+                border-bottom: 2px solid $blue01;
+            }
+
+            &__users-wrapper {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: row;
+            }
+            
+            &__col {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 150px;
+            }
+    
+            &__img {
+                width: 25px;
+                height: 25px;
+                align-self: center;
+            }
+    
+            &__users-count {
+                font-weight: 600;
+                letter-spacing: 0.04em;
+                font-size: 15px;
+            }
+    
+            &__users {
+                font-weight: 600;
+                font-size: 14px;
+            }
+    
+            &__more {
+                font-size: 9px;
+                text-decoration: underline;
+                text-decoration-style: dashed;
+                color: $colorGray;
+                margin-bottom: 15px;
+                margin-top: 5px;
+            }
+    
+            &__old-price {
+                margin-top: 10px;
+                text-decoration: line-through;
+                font-size: 12px;
+                color: $colorGray;
+            }
+    
+            &__price {
+                display: flex;
+                flex-direction: row;
+    
+                &_green {
+                    color: $colorGreen;
+                    font-weight: 600;
+                    font-size: 20px;
+                    letter-spacing: 0.06em;
+                    margin-bottom: 55px;
+                }
+    
+                &_blue {
+                    color: $colorBlue03;
+                    font-weight: bold;
+                    font-size: 18px;
+                    margin: 5px 0 10px 0px;
+                }
+            }
+    
+            &__sale {
+                width: 44px;
+                height: 22px;
+                background-color: $lime;
+                transform: skewX(-10deg);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: 5px;
+            }
+    
+            &__storage {
+                margin-top: 30px;
+                color: $colorBlack;
+                font-size: 16px;
+                font-weight: bolder;
+            }
+    
+            &__many-users {
+                color: $colorBlue01;
+                text-decoration: underline;
+                text-decoration-style: dashed;
+                font-size: 12px;
+                font-weight: bold;
+                margin-bottom: 33px;
+            }        
+        }
+    }
+
+    @media screen and (max-width: 1100px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: repeat(1, 1fr);
+        margin-top: 0;
+    }
+}

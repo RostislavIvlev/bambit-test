@@ -1,0 +1,26 @@
+.btn {
+    width: 160px;
+    height: 33px;
+    border: 2px solid $blue02;
+    border-radius: 15px;
+    cursor: pointer;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: $colorBlack;
+    font-weight: 600;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &_blue {
+        background-color: $blue02;
+        color: white;
+    }
+
+    &_green {
+        background-color: $green03;
+        color: white;
+        border: none;
+    }
+}

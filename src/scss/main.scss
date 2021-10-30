@@ -2,7 +2,11 @@
 @import "./utils/vars.scss";
 @import "./components/card.scss";
 @import "../components/dropdown/dropdown.scss";
+@import "./cards-wrapper.scss";
+@import "../components/button/button.scss";
+@import "./components/card.scss";
 
 body {
     font-family: $mainFont;
+    font-size: 16px;
 }

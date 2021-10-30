@@ -1,9 +1,91 @@
 doctype html
+include ./components/button/button
 html(lang="en")
     head
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        title Document
+        title Bambit
     body
-      include ./components/dropdown/dropdown
+      .cards-wrapper
+        .head
+          .head__block
+            .head__text Цена за месяц при покупке на
+            include ./components/dropdown/dropdown
+          .head__block
+            .head__text Продлить тарифы, купленные до 1 августа 2021
+            +button("Архив тарифов")
+        
+        .cards 
+          .card
+            .card-header
+              h2.card-header__title Бесплатный
+              .card-header__promote Начните работать онлайн и продавать больше с CRM
+            .card-body.card-body_green-line
+              .card-body__users-wrapper
+                img.card-body__img(src="./assets/images/hotjar.svg", alt="")
+                .card-body__col
+                  .card-body__users-count неограниченно
+                  .card-body__users пользователей
+              a(href="#").card-body__more узнать больше
+              .card-body__price.card-body__price_green Бесплатно
+
+              +button("Создать", "green")
+              .card-body__storage 5 Гб
+
+          .card.card_blue
+            .card-header.card-header_blue
+              h2.card-header__title Базовый  
+              .card-header__promote Для эффективной работы небольших компаний и отделов продаж
+            .card-body.card-body_blue-line
+              .card-body__users-wrapper
+                .card-body__col
+                  .card-body__users-count 5
+                  .card-body__users пользователей
+              .card-body__old-price 2 490 ₽/мес.
+              .card-body__price.card-body__price_blue
+                span 1 990 ₽/мес.
+                span.card-body__sale -20%
+              .card-body__many-users за всех пользователей
+
+              +button("Купить", "blue")
+              .card-body__storage 24 Гб
+
+          .card.card_blue
+            .card-header.card-header_blue
+              h2.card-header__title Стандартный  
+              .card-header__promote Для совместной работы всей компании или рабочих групп
+            .card-body.card-body_blue-line
+              .card-body__users-wrapper
+                .card-body__col
+                  .card-body__users-count 50
+                  .card-body__users пользователей
+              .card-body__old-price 5 990 ₽/мес.
+              .card-body__price.card-body__price_blue
+                span 4 790 ₽/мес.
+                span.card-body__sale -20%
+              .card-body__many-users за всех пользователей
+
+              +button("Купить", "blue")
+              .card-body__storage 100 Гб
+
+          .card.card_blue
+            .card-header.card-header_blue
+              h2.card-header__title Профессональный  
+              .card-header__promote Для максимальной автоматизации всех процессов в компании
+            .card-body.card-body_blue-line
+              .card-body__users-wrapper
+                img.card-body__img(src="./assets/images/hotjar.svg", alt="")
+                .card-body__col
+                  .card-body__users-count неограниченно
+                  .card-body__users пользователей
+              .card-body__old-price 11 990 ₽/мес.
+              .card-body__price.card-body__price_blue
+                span 9 590 ₽/мес.
+                span.card-body__sale -20%
+              .card-body__many-users за всех пользователей
+
+              +button("Купить", "blue")
+              .card-body__storage 1024 Гб
+
+          

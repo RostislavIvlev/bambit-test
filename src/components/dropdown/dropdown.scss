@@ -15,6 +15,7 @@
         padding-right: 15px;
         color: $colorBlack;
         font-weight: 600;
+        transition: 0.3s ease;
 
         &__sale {
             width: 44px;
@@ -29,6 +30,11 @@
             &_hidden {
                 display: none;
             }
+        }
+
+        &_toggled {
+            border-radius: 0;
+            transition: 0.3s ease;
         }
     }
 

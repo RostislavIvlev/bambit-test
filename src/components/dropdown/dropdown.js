@@ -3,10 +3,14 @@ import $ from "jquery";
 global.jQuery = $;
 global.$ = $;
 
+
 $(function() {
-    $(".dropdown-btn").click(function() {
+    $(".dropdown-btn").on("click",(function() {
         $(this).next(".dropdown").slideToggle();
-    })
+        if ($(this).hasClass("dropdown-btn_toggled")) {
+            $(this).removeClass("dropdown-btn_toggled")
+        } else $(this).addClass("dropdown-btn_toggled")
+    }))
 })
 
 $(document).on("click", (function(e) {
@@ -14,6 +18,7 @@ $(document).on("click", (function(e) {
     let saleText = "";
     if (!$(target).is(".dropdown-btn") && !$(target).parents().is(".dropdown-btn")) {
         $(".dropdown").slideUp();
+        $(".dropdown-btn").removeClass("dropdown-btn_toggled")
     }
     
     if ($(target).is(".dropdown__item")) {

@@ -1,0 +1,67 @@
+.dropdown-wrapper {
+    position: relative;
+
+    .dropdown-btn {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 160px;
+        height: 30px;
+        border: 2px solid $blue02;
+        border-radius: 15px;
+        cursor: pointer;
+        padding-left: 15px;
+        padding-right: 15px;
+        color: $colorBlack;
+        font-weight: 600;
+
+        &__sale {
+            width: 44px;
+            height: 22px;
+            background-color: $yellow;
+            text-align: center;
+            transform: skewX(-10deg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &_hidden {
+                display: none;
+            }
+        }
+    }
+
+    .dropdown {
+        padding: 5px 15px 15px 15px;
+        width: 160px;
+        background-color: rgba(211, 211, 211, 0.24);
+        display: none;
+        position: absolute;
+        top: 100%;
+
+        &__item {
+            margin-top: 15px;
+            color: $colorGray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        &__sale {
+            width: 44px;
+            height: 22px;
+            background-color: $yellow;
+            text-align: center;
+            transform: skewX(-10deg);
+            font-weight: bold;
+            color: $colorBlack;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none;
+        }
+    }
+}

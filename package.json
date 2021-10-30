@@ -18,6 +18,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.5.0",
     "html-loader": "^3.0.0",
+    "html-webpack-externals-plugin": "^3.8.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.4.3",
     "node-sass": "^6.0.1",
@@ -39,5 +40,8 @@
     "url": "https://github.com/RostislavIvlev/bambit-test/issues"
   },
   "homepage": "https://github.com/RostislavIvlev/bambit-test#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
 }
